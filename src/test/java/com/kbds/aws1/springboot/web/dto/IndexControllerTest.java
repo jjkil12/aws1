@@ -23,7 +23,7 @@ public class IndexControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("AWS + SP2 Ver.1");
+        assertThat(body).contains("KB데이타 AWS COP");
 
     }
 }
