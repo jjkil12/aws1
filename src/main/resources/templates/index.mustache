@@ -25,7 +25,8 @@
         {{#posts}}
             <tr>
                 <td>{{id}}</td>
-                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                {{#userEmail}}<td><a href="/posts/update/{{id}}">{{title}}</a></td>{{/userEmail}}
+                {{^userEmail}}<td>{{title}}</a></td>{{/userEmail}}
                 <td>{{author}}</td>
                 <td>{{modifiedDate}}</td>
             </tr>
