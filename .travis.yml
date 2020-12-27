@@ -20,7 +20,7 @@ script: "./gradlew clean build"
 before_deploy:
   - zip -r aws1-sp2-webservice *
   - mkdir -p deploy
-  - aws1-sp2-webservice.zip deploy/aws1-sp2-webservice.zip
+  - mv aws1-sp2-webservice.zip deploy/aws1-sp2-webservice.zip
 
 deploy:
   - provider: s3
