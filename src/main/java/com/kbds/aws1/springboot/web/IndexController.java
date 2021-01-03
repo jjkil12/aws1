@@ -48,8 +48,16 @@ public class IndexController {
         if (user == null) {
             return "index";
         }
+        //model.addAttribute("userEmail", user.getEmail());
         PostsResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
+        if(dto.getAuthor().equals(user.getEmail())) {
+            model.addAttribute("pageAuth", false);
+        }
+        else {
+            model.addAttribute("pageAuth", true);
+        }
+
 
         return "posts-update";
     }
