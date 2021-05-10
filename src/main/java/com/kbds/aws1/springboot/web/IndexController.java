@@ -33,7 +33,7 @@ public class IndexController {
 
         while (iterator.hasNext()) {
             PostsListResponseDto strCol = (PostsListResponseDto) iterator.next();
-            if("[COP]".equals(strCol.getTitle().substring(0,5))) {
+            if(strCol.getTitle().length() >= 5 && "[COP]".equals(strCol.getTitle().substring(0,5))) {
                 strCol.setColor("#6f42c1");
             }
             else {
