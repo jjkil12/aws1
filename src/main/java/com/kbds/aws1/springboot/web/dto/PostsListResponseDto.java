@@ -13,6 +13,7 @@ public class PostsListResponseDto {
     private String author;
     private String modifiedDate;
     private String createdDate;
+    private String color;
 
 
     public PostsListResponseDto(Posts entity) {
@@ -23,5 +24,9 @@ public class PostsListResponseDto {
         this.modifiedDate = entity.getModifiedDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         //this.createdDate = entity.getCreatedDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         this.createdDate = entity.getCreatedDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }
