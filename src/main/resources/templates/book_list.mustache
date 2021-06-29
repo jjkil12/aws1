@@ -1,0 +1,116 @@
+{{>layout/header}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Album example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/app/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .bg-grey {
+        background-color:#A6A6A6
+      }
+    </style>
+
+
+</head>
+<body>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h6 class="border-bottom pb-2 mb-0">Book Lists</h6>
+        <!--
+        <div class="d-flex text-muted pt-3">
+            {{#posts}}
+                <div>
+                    <button type="button" class="btn btn-default btn-xs">추리소설</button>
+                </div>
+                <div class="d-flex text-muted pt-3">
+
+                    {{^userEmail}}<svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>로그인 해주세요</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>{{/userEmail}}
+                    {{#userEmail}}<a href="/posts/update/{{id}}"><svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>상세보기 입니다.</title><rect width="100%" height="100%" fill="{{color}}"/><text x="50%" y="50%" fill="{{color}}" dy=".3em">32x32</text></svg></a>{{/userEmail}}
+
+                    <p class="pb-3 mb-0 small lh-sm border-bottom">
+                        <strong class="d-block text-gray-dark">{{author}}</strong><br>
+                        <strong class="d-block text-dark">{{title}}</strong> <br>
+                        <strong class="d-block text-gray-dark">c : {{id}}</strong>
+                    </p>
+                </div>
+            {{/posts}}
+        </div>
+        -->
+        {{#books}}
+        <div class="d-flex text-muted pt-1 mb-0">
+                <div >
+                    <span class="badge rounded-pill bg-grey">{{genre}}</span>
+                </div>
+        </div>
+        <div class="d-flex text-muted pt-0 mb-0">
+                <div class="d-flex text-muted pt-3 mb-0">
+                    <p class="pb-2 mb-0 small lh-sm">
+                        <strong class="d-block text-lg-start text-dark">
+                            <a href="/book_detail/{{book_id}}">{{book_id}} {{title}}</a></strong><br>
+                        <small class="d-block text-lg-start text-gray-dark">{{comment}}</small> <br>
+                    </p>
+                </div>
+        </div>
+            <p class="text-left mb-1 border-top">
+                <sub class="text-gray-dark">{{user}}</sub>
+            </p>
+        {{/books}}
+    <!--
+    <div class="d-flex text-muted pt-3">
+        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
+
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <strong class="d-block text-gray-dark">@username</strong>
+            test.
+        </p>
+    </div>
+    <div class="d-flex text-muted pt-3">
+        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
+
+        <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <strong class="d-block text-gray-dark">@username</strong>
+            test.
+        </p>
+    </div>
+    -->
+    <p class="float-end mb-1">
+        <a href="#"><span class="badge rounded-pill bg-warning text-dark">top</span></a>
+    </p>
+    <p class="mb-1">
+        {{^userMail}}<a href="/oauth2/authorization/google"><span class="badge rounded-pill bg-info text-dark">login</span></a>{{/userMail}}
+        {{#userMail}}<a href="/book_save"><span class="badge rounded-pill bg-dark">write</span></a>
+            <a href="/logout"><span class="badge rounded-pill bg-dark">logout</span></a>
+            <!--<a href="/book"><span class="badge rounded-pill bg-dark">book</span></a>-->{{/userMail}}
+    </p>
+</div>
+<header>
+
+</header>
+</body>
+</html>
+{{>layout/footer}}
