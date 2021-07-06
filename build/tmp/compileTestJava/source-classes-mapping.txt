@@ -1,0 +1,10 @@
+com/kbds/aws1/springboot/web/PostsApiControllerTest.java
+ com.kbds.aws1.springboot.web.PostsApiControllerTest
+com/kbds/aws1/springboot/web/dto/HelloResponseDtoTest.java
+ com.kbds.aws1.springboot.web.dto.HelloResponseDtoTest
+com/kbds/aws1/springboot/domain/posts/PostsRepositoryTest.java
+ com.kbds.aws1.springboot.domain.posts.PostsRepositoryTest
+com/kbds/aws1/springboot/web/dto/IndexControllerTest.java
+ com.kbds.aws1.springboot.web.dto.IndexControllerTest
+com/kbds/aws1/springboot/web/HelloControllerTest.java
+ com.kbds.aws1.springboot.web.HelloControllerTest

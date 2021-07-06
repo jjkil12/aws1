@@ -1,55 +1,84 @@
-com/kbds/aws1/springboot/domain/user/User.java
- com.kbds.aws1.springboot.domain.user.User
- com.kbds.aws1.springboot.domain.user.User$UserBuilder
 com/kbds/aws1/springboot/domain/BaseTimeEntity.java
  com.kbds.aws1.springboot.domain.BaseTimeEntity
-com/kbds/aws1/springboot/config/auth/CustomOAuth2UserService.java
- com.kbds.aws1.springboot.config.auth.CustomOAuth2UserService
-com/kbds/aws1/springboot/web/HelloController.java
- com.kbds.aws1.springboot.web.HelloController
-com/kbds/aws1/springboot/domain/posts/Posts.java
- com.kbds.aws1.springboot.domain.posts.Posts
- com.kbds.aws1.springboot.domain.posts.Posts$PostsBuilder
-com/kbds/aws1/springboot/web/dto/PostsSaveRequestDto.java
- com.kbds.aws1.springboot.web.dto.PostsSaveRequestDto
- com.kbds.aws1.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
-com/kbds/aws1/springboot/config/auth/dto/SessionUser.java
- com.kbds.aws1.springboot.config.auth.dto.SessionUser
-com/kbds/aws1/springboot/config/WebConfig.java
- com.kbds.aws1.springboot.config.WebConfig
-com/kbds/aws1/springboot/config/auth/LoginUserArgumentResolver.java
- com.kbds.aws1.springboot.config.auth.LoginUserArgumentResolver
-com/kbds/aws1/springboot/Application.java
- com.kbds.aws1.springboot.Application
-com/kbds/aws1/springboot/web/PostsApiController.java
- com.kbds.aws1.springboot.web.PostsApiController
-com/kbds/aws1/springboot/domain/posts/PostsRepository.java
- com.kbds.aws1.springboot.domain.posts.PostsRepository
-com/kbds/aws1/springboot/domain/user/UserRepository.java
- com.kbds.aws1.springboot.domain.user.UserRepository
+com/kbds/aws1/springboot/web/dto/PostsResponseDto.java
+ com.kbds.aws1.springboot.web.dto.PostsResponseDto
 com/kbds/aws1/springboot/web/dto/PostsUpdateRequestDto.java
  com.kbds.aws1.springboot.web.dto.PostsUpdateRequestDto
  com.kbds.aws1.springboot.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
 com/kbds/aws1/springboot/web/dto/HelloResponseDto.java
  com.kbds.aws1.springboot.web.dto.HelloResponseDto
+com/kbds/aws1/springboot/config/WebConfig.java
+ com.kbds.aws1.springboot.config.WebConfig
+com/kbds/aws1/springboot/web/PostsApiController.java
+ com.kbds.aws1.springboot.web.PostsApiController
+com/kbds/aws1/springboot/domain/user/UserRepository.java
+ com.kbds.aws1.springboot.domain.user.UserRepository
+com/kbds/aws1/springboot/domain/posts/PostsRepository.java
+ com.kbds.aws1.springboot.domain.posts.PostsRepository
+com/kbds/aws1/springboot/config/auth/SecurityConfig.java
+ com.kbds.aws1.springboot.config.auth.SecurityConfig
+com/kbds/aws1/springboot/domain/user/Role.java
+ com.kbds.aws1.springboot.domain.user.Role
+com/kbds/aws1/springboot/config/auth/LoginUser.java
+ com.kbds.aws1.springboot.config.auth.LoginUser
+com/kbds/aws1/springboot/domain/posts/Posts.java
+ com.kbds.aws1.springboot.domain.posts.Posts
+ com.kbds.aws1.springboot.domain.posts.Posts$PostsBuilder
+com/kbds/aws1/springboot/config/JpaConfig.java
+ com.kbds.aws1.springboot.config.JpaConfig
+com/kbds/aws1/springboot/web/dto/PostsListResponseDto.java
+ com.kbds.aws1.springboot.web.dto.PostsListResponseDto
+com/kbds/aws1/springboot/web/HelloController.java
+ com.kbds.aws1.springboot.web.HelloController
+com/kbds/aws1/springboot/web/dto/PostsSaveRequestDto.java
+ com.kbds.aws1.springboot.web.dto.PostsSaveRequestDto
+ com.kbds.aws1.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
+com/kbds/aws1/springboot/Application.java
+ com.kbds.aws1.springboot.Application
+com/kbds/aws1/springboot/config/auth/LoginUserArgumentResolver.java
+ com.kbds.aws1.springboot.config.auth.LoginUserArgumentResolver
+com/kbds/aws1/springboot/service/posts/PostsService.java
+ com.kbds.aws1.springboot.service.posts.PostsService
+com/kbds/aws1/springboot/domain/user/User.java
+ com.kbds.aws1.springboot.domain.user.User
+ com.kbds.aws1.springboot.domain.user.User$UserBuilder
+com/kbds/aws1/springboot/config/auth/CustomOAuth2UserService.java
+ com.kbds.aws1.springboot.config.auth.CustomOAuth2UserService
+com/kbds/aws1/springboot/config/auth/dto/SessionUser.java
+ com.kbds.aws1.springboot.config.auth.dto.SessionUser
+com/kbds/aws1/springboot/web/dto/ReplySaveRequestDto.java
+ com.kbds.aws1.springboot.web.dto.ReplySaveRequestDto
+ com.kbds.aws1.springboot.web.dto.ReplySaveRequestDto$ReplySaveRequestDtoBuilder
+com/kbds/aws1/springboot/domain/replys/Reply.java
+ com.kbds.aws1.springboot.domain.replys.Reply
+ com.kbds.aws1.springboot.domain.replys.Reply$ReplyBuilder
+com/kbds/aws1/springboot/web/dto/BooksResponseDto.java
+ com.kbds.aws1.springboot.web.dto.BooksResponseDto
+com/kbds/aws1/springboot/service/books/BooksService.java
+ com.kbds.aws1.springboot.service.books.BooksService
+com/kbds/aws1/springboot/web/dto/BooksListResponseDto.java
+ com.kbds.aws1.springboot.web.dto.BooksListResponseDto
+com/kbds/aws1/springboot/web/BooksController.java
+ com.kbds.aws1.springboot.web.BooksController
+com/kbds/aws1/springboot/web/dto/BooksUpdateRequestDto.java
+ com.kbds.aws1.springboot.web.dto.BooksUpdateRequestDto
+ com.kbds.aws1.springboot.web.dto.BooksUpdateRequestDto$BooksUpdateRequestDtoBuilder
+com/kbds/aws1/springboot/web/dto/BooksSaveRequestDto.java
+ com.kbds.aws1.springboot.web.dto.BooksSaveRequestDto
+ com.kbds.aws1.springboot.web.dto.BooksSaveRequestDto$BooksSaveRequestDtoBuilder
 com/kbds/aws1/springboot/config/auth/dto/OAuthAttributes.java
  com.kbds.aws1.springboot.config.auth.dto.OAuthAttributes
  com.kbds.aws1.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
-com/kbds/aws1/springboot/domain/user/Role.java
- com.kbds.aws1.springboot.domain.user.Role
-com/kbds/aws1/springboot/web/BooksController.java
- com.kbds.aws1.springboot.web.BooksController
-com/kbds/aws1/springboot/web/dto/PostsResponseDto.java
- com.kbds.aws1.springboot.web.dto.PostsResponseDto
-com/kbds/aws1/springboot/config/auth/LoginUser.java
- com.kbds.aws1.springboot.config.auth.LoginUser
-com/kbds/aws1/springboot/config/JpaConfig.java
- com.kbds.aws1.springboot.config.JpaConfig
-com/kbds/aws1/springboot/config/auth/SecurityConfig.java
- com.kbds.aws1.springboot.config.auth.SecurityConfig
-com/kbds/aws1/springboot/service/posts/PostsService.java
- com.kbds.aws1.springboot.service.posts.PostsService
+com/kbds/aws1/springboot/domain/replys/ReplyRepository.java
+ com.kbds.aws1.springboot.domain.replys.ReplyRepository
+com/kbds/aws1/springboot/web/BooksApiController.java
+ com.kbds.aws1.springboot.web.BooksApiController
 com/kbds/aws1/springboot/web/IndexController.java
  com.kbds.aws1.springboot.web.IndexController
-com/kbds/aws1/springboot/web/dto/PostsListResponseDto.java
- com.kbds.aws1.springboot.web.dto.PostsListResponseDto
+com/kbds/aws1/springboot/web/dto/ReplyDto.java
+ com.kbds.aws1.springboot.web.dto.ReplyDto
+com/kbds/aws1/springboot/domain/books/Books.java
+ com.kbds.aws1.springboot.domain.books.Books
+ com.kbds.aws1.springboot.domain.books.Books$BooksBuilder
+com/kbds/aws1/springboot/domain/books/BooksRepository.java
+ com.kbds.aws1.springboot.domain.books.BooksRepository

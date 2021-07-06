@@ -1,11 +1,15 @@
 package com.kbds.aws1.springboot.domain.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.kbds.aws1.springboot.domain.BaseTimeEntity;
+import com.kbds.aws1.springboot.domain.books.Books;
+import com.kbds.aws1.springboot.domain.replys.Reply;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -28,6 +32,7 @@ public class User extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
+
 
     @Builder
     public User(String name, String email, String picture, Role role) {
