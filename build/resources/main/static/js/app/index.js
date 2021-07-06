@@ -71,8 +71,4 @@ var main = {
     }
 
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> dd3eb9a90d31168f25c1a1e5f452b785ac90adcf
 main.init();
