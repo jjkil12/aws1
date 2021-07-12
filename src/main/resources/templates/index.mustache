@@ -7,12 +7,9 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.83.1">
     <title>KBDS v1.0</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
-
     <!-- Bootstrap core CSS -->
     <link href="/css/app/bootstrap.min.css" rel="stylesheet">
-
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -21,24 +18,22 @@
         -moz-user-select: none;
         user-select: none;
       }
-
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
     </style>
-<!-- Custom styles for this template -->
-<link href="/css/app/offcanvas.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/app/offcanvas.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">XM7PLUS++</a>
+        <a class="navbar-brand" href="#">XM7PLUS</a>
         <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -73,7 +68,6 @@
         </div>
     </div>
 </nav>
-
 <div class="nav-scroller bg-body shadow-sm">
     <nav class="nav nav-underline" aria-label="Secondary navigation">
         <a class="nav-link active" aria-current="page" href="#">Cop Friends<span class="badge bg-light text-dark rounded-pill align-text-bottom">7</span></a>
@@ -82,7 +76,6 @@
             Friends
             <span class="badge bg-light text-dark rounded-pill align-text-bottom">7</span>
         </a>
-
         <a class="nav-link" href="#">Explore</a>
         <a class="nav-link" href="#">Suggestions</a>
         <a class="nav-link" href="#">Link</a>
@@ -93,64 +86,84 @@
         -->
     </nav>
 </div>
-
 <main class="container">
     <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
         <div class="lh-1">
             <h1 class="h6 mb-0 text-black lh-1">KB 데이타 시스템 2021년도 COP </h1>
             <!--<small>[XM7PLUS]</small>-->
-
-    <!--<a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>-->
-    <!--<a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>-->
-
+            <!--<a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>-->
+            <!--<a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>-->
         </div>
     </div>
-
     <div class="my-3 p-3 bg-body rounded shadow-sm">
         <h6 class="border-bottom pb-2 mb-0">Recent updates</h6>
-{{#posts}}
-        <div class="d-flex text-muted pt-3">
-            {{^userEmail}}<svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>로그인 해주세요</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>{{/userEmail}}
-            {{#userEmail}}<a href="/posts/update/{{id}}"><svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>상세보기 입니다.</title><rect width="100%" height="100%" fill="{{color}}"/><text x="50%" y="50%" fill="{{color}}" dy=".3em">32x32</text></svg></a>{{/userEmail}}
+        {{#posts}}
+            <div class="d-flex text-muted pt-3">
+                {{^userEmail}}
+                    <p class="pb-3 mb-0 small lh-sm border-bottom" title="로그인 해주세요.">
+                        <strong class="d-block text-gray-dark">{{author}}</strong><br><br>
 
-            <p class="pb-3 mb-0 small lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">{{author}}</strong><br>
-                <strong class="d-block text-dark">{{title}}</strong> <br>
-                <strong class="d-block text-gray-dark">c : {{createdDate}} | m : {{modifiedDate}}</strong>
-            </p>
-        </div>
-{{/posts}}
+
+
+
+
+
+
+
+                        @@ -126,16 +125,6 @@
+
+                        <strong class="d-block text-dark">{{title}}</strong> <br><br>
+                        <strong class="d-block text-gray-dark">c : {{createdDate}} | m : {{modifiedDate}}</strong>
+                    </p>
+                {{/userEmail}}
+                {{#userEmail}}
+                    <a class="pb-3 mb-0 small lh-sm border-bottom" href="/posts/update/{{id}}" title="상세보기입니다.">
+                        <div class="d1">
+                            <strong class="d-block text-gray-dark">{{author}}</strong><br><br>
+                            <strong class="d-block text-dark">{{title}}</strong><br><br>
+                            <strong class="d-block text-gray-dark">c : {{createdDate}} | m : {{modifiedDate}}</strong>
+                        </div>
+                    </a>{{/userEmail}}
+            </div>
+        {{/posts}}
         <!--
-        <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
 
-            <p class="pb-3 mb-0 small lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">@username</strong>
-                test.
-            </p>
-        </div>
-        <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
 
-            <p class="pb-3 mb-0 small lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">@username</strong>
-                test.
-            </p>
-        </div>
-        -->
+
+
+
+
+
+
+
+
+       <div class="d-flex text-muted pt-3">
+           <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
+           <p class="pb-3 mb-0 small lh-sm border-bottom">
+               <strong class="d-block text-gray-dark">@username</strong>
+               test.
+           </p>
+       </div>
+       <div class="d-flex text-muted pt-3">
+           <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
+           <p class="pb-3 mb-0 small lh-sm border-bottom">
+               <strong class="d-block text-gray-dark">@username</strong>
+               test.
+           </p>
+       </div>
+       -->
         <p class="float-end mb-1">
             <a href="#"><span class="badge rounded-pill bg-warning text-dark">top</span></a>
         </p>
         <p class="mb-1">
             {{^userEmail}}<a href="/oauth2/authorization/google"><span class="badge rounded-pill bg-info text-dark">login</span></a>{{/userEmail}}
             {{#userEmail}}<a href="/posts/save"><span class="badge rounded-pill bg-dark">write</span></a>
-                          <a href="/logout"><span class="badge rounded-pill bg-dark">logout</span></a>
-                          <!--<a href="/book"><span class="badge rounded-pill bg-dark">book</span></a>-->{{/userEmail}}
+                <a href="/logout"><span class="badge rounded-pill bg-dark">logout</span></a>
+                <!--<a href="/book"><span class="badge rounded-pill bg-dark">book</span></a>-->{{/userEmail}}
         </p>
     </div>
 </main>
-
-    <!--Logged in as: <span id="user">{{!userName}}{{!userEmail}}</span>
+<!--Logged in as: <span id="user">{{!userName}}{{!userEmail}}</span>
     <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
     <a href="/logout" class="btn btn-info active" role="button">LOGOUT</a>
     <a href="/book"  class="btn btn-success active" role="button">BOOK</a>-->
