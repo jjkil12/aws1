@@ -71,5 +71,4 @@ var main = {
     }
 
 };
-
 main.init();
