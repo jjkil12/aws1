@@ -112,50 +112,41 @@
         {{books.comment}}
     </div>
 
-
-    <form>
-        <div class="col-md-12">
-            <a href="/book_list" role="button" class="btn btn-secondary">목록</a>
-            {{^pageAuth}}
-                <a href="/book_update/{{books.book_id}}">
-                    <span class="btn btn-primary" style="text-align:right">수정</span>
-                </a>
-            {{/pageAuth}}
-        </div>
-        <br>
-
-        <input type = "hidden" id = "book_id" value={{books.book_id}} />
-        <input type = "hidden" id = "user_mail" value={{userMail}} />
-        <div class="form-group">
-            <strong for="genre">댓글쓰기</strong>
-            <input type="text" class="form-control" id="reply_text">
-        </div>
-        <div class="card-footer" style="text-align:right">
-            <button type="button" id = "btn-reply-save" class ="badge rounded-pill bg-dark">등록</button>
-        </div>
-    </form>
-
     <div class="card">
         <ul id="reply-box" class="list-group">
             {{#reply}}
                 <li id="reply-{{rno}}" class="list-group-item d-flex justify-content-between">
                     <!--댓글 내용입니다-->
-                    <!-- 임시 막기
                     <div>
                         <textarea id="reply_id">{{rno}}</textarea>
                     </div>
-                    -->
-                    <div>
-                        <strong id = "reply_user" class="font-italic">{{user}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="badge" onclick="book_main.reply_delete({{books.book_id}},{{rno}})" style="font-size:5px; background-color:red; with:5px; height:20px">삭제</button>
-                        <button class="badge" onclick="book_main.reply_delete({{books.book_id}},{{rno}})" style="font-size:5px; background-color:blue; with:5px; height:20px">수정</button>
-                        <br>
-                        {{text}}
+                    <div>{{text}}</div>
+                    <div class="d-flex">
+                        <div id = "reply_user" class="font-italic">작성자 : {{user}}</div>
+                        <button class="badge" onclick="book_main.reply_delete({{books.book_id}},{{rno}})" >X</button>
                     </div>
                 </li>
             {{/reply}}
         </ul>
     </div>
+    <form>
+        <input type = "hidden" id = "book_id" value={{books.book_id}} />
+        <input type = "hidden" id = "user_mail" value={{userMail}} />
+        <div class="form-group">
+            <label for="genre">댓글쓰기</label>
+            <input type="text" class="form-control" id="reply_text"  >
+        </div>
+        <div class="col-md-12">
+            <a href="/book_list" role="button" class="btn btn-secondary">확인</a>
+            {{^pageAuth}}
+                <a href="/book_update/{{books.book_id}}"><span class="badge rounded-pill bg-dark">수정</span></a>
+            {{/pageAuth}}
+        </div>
+        <div class="card-footer">
+            <button type="button" id = "btn-reply-save" class ="btn btn-primary">등록</button>
+        </div>
+    </form>
+
         <!-- 아코디언
 
 <div align="right" class="d-flex text-muted pt-2 mb-0 border-bottom">
