@@ -1,0 +1,41 @@
+{{>layout/header}}
+
+<h1>게시글 수정</h1>
+
+<div class="col-md-12">
+    <!--<div class="col-md-4">-->
+    <form>
+        <div class="form-group" hidden="hidden">
+            <label for="genre">글번호</label>
+            <input type="text" class="form-control" id="book_id" value={{books.book_id}} >
+        </div>
+        <div class="form-group">
+            <label for="genre">장르</label>
+            <input type="text" class="form-control" id="genre" value={{books.genre}} >
+        </div>
+        <div class="form-group">
+            <label for="book_name">도서명</label>
+            <input type="text" class="form-control" id="book_name" value={{books.book_name}}>
+        </div>
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" class="form-control" id="title" value={{books.title}}>
+        </div>
+        <div class="form-group">
+            <label for="user"> 작성자 </label>
+            <input type="text" class="form-control" id="user" placeholder="작성자를 입력하세요" value="{{userMail}}" readonly >
+        </div>
+        <div class="form-group">
+            <label for="comment"> 내용 </label>
+            <textarea class="form-control " id="comment" rows="15">{{books.comment}}</textarea>
+        </div>
+    </form>
+    <a href="/" role="button" class="btn btn-secondary">취소</a>
+    {{^pageAuth}}
+        <button type="button" class="btn btn-primary" id="btn-book-update">수정 완료</button>
+        <button type="button" class="btn btn-danger" id="btn-book-delete">삭제</button>
+    {{/pageAuth}}
+    <!--</div>-->
+</div>
+
+{{>layout/footer}}
