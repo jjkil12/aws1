@@ -12,4 +12,4 @@ a { text-decoration : none; }
 .d1{ color:#6c757d;}
 .d1:hover { color:none !important }
 #i1{ color : black }
-/* #i1:hover { color:blue !important } */
+/* #i1:hover { color:blue !important } 그냥 호버 옵셥을 빼겠습니다.*/
