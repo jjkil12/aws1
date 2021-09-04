@@ -20,6 +20,35 @@ var book_main = {
         $('#btn-reply-delete').on('click', function () {
             _this.reply_delete();
         });
+
+    },
+    reply_update : function (book_id,reply_id,reply_text) {
+    var data = {
+                update_text: $('#'+reply_text).val(),
+                user_mail: $('#reply_user_mail').val()
+            };
+           // var test='#'+reply_text;
+           // alert(test);
+           //alert(reply_text);
+            //var test=document.getElementById(reply_text);
+            //alert(test);
+            //var test=$('#reply_update_text_'+reply_id).val();
+            alert(reply_text);
+            var text=$('#'+reply_text).val();
+            alert(text);
+
+            $.ajax({
+                type: 'PUT',
+                url: '/api/v1/books/'+book_id+'/reply/'+reply_id,
+                dataType: 'json',
+                contentType:'application/json; charset=utf-8',
+                data: JSON.stringify(data)
+            }).done(function() {
+                alert('댓글이 수정되었습니다.');
+                window.location.href = '/book_detail/'+book_id;
+            }).fail(function (error) {
+                alert(JSON.stringify(error));
+            });
     },
     reply_delete : function (book_id,reply_id) {
             $.ajax({

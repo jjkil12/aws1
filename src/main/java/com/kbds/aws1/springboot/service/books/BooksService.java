@@ -23,6 +23,27 @@ public class BooksService {
     private final UserRepository userRepository;
 
     @Transactional
+    public void reply_update(int reply_id, Long book_id, ReplyUpdateRequestDto requestDto){
+        Reply reply = replyRepository.findById(reply_id).orElseThrow(()->{
+            return new IllegalArgumentException("댓글찾기 실패 : 댓글 id를 찾을수 없습니다");
+        });
+
+        User user = userRepository.findByEmail(requestDto.getUser_mail()).orElseThrow(()-> {
+            return new IllegalArgumentException("댓글쓰기 실패 : 유저 id를 찾을수 없음");
+        });
+
+        Books book = booksRepository.findById(book_id).orElseThrow(()-> {
+            return new IllegalArgumentException("댓글찾기 실패 : 게시글 id를 찾을수 없음");
+        });
+        System.out.println("-----파라미터 확인-----");
+        System.out.println("수정내용 : "+requestDto.getUpdate_text());
+        System.out.println("book : "+book);
+        System.out.println("user : "+user);
+        System.out.println("댓글 번호 : "+reply_id);
+        reply.update(requestDto.getUpdate_text(),book,user, reply_id);
+
+    }
+    @Transactional
     public  void reply_delete(Long book_id, int reply_id){
         Books books = booksRepository.findById(book_id).orElseThrow(()-> {
             return new IllegalArgumentException("댓글찾기 실패 : 게시글 id를 찾을수 없음");

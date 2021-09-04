@@ -17,6 +17,20 @@ public class BooksApiController {
         return booksService.reply_save(book_id, replySaveRequestDto);
     }
 
+    @DeleteMapping("/api/v1/books/{book_id}/reply/{reply_id}")
+    public Long reply_delete(@PathVariable Long book_id, @PathVariable int reply_id){
+        booksService.reply_delete(book_id,reply_id);
+        return  book_id;
+    }
+
+    @PutMapping("/api/v1/books/{book_id}/reply/{reply_id}")
+    public Long reply_update(@PathVariable int reply_id,@PathVariable Long book_id,
+                             @RequestBody ReplyUpdateRequestDto requestDto) {
+        booksService.reply_update(reply_id,book_id, requestDto);
+
+        return book_id;
+    }
+
     @PostMapping("/api/v1/books")
     public Long save(@RequestBody BooksSaveRequestDto requestDto) {
         return booksService.save(requestDto);
@@ -26,11 +40,7 @@ public class BooksApiController {
     public Long update(@PathVariable Long book_id, @RequestBody BooksUpdateRequestDto requestDto) {
         return booksService.update(book_id, requestDto);
     }
-    @DeleteMapping("/api/v1/books/{book_id}/reply/{reply_id}")
-    public Long reply_delete(@PathVariable Long book_id, @PathVariable int reply_id){
-        booksService.reply_delete(book_id,reply_id);
-        return  book_id;
-    }
+
 
     @DeleteMapping("/api/v1/books/{book_id}")
     public Long delete(@PathVariable Long book_id) {

@@ -37,6 +37,14 @@ public class Reply extends BaseTimeEntity {
         this.reply_user = user.getEmail();
         this.user = user;
     }
+
+    public void update(String text,  Books books,User user , int rno){
+        this.text = text;
+        this.books = books;
+        this.reply_user = user.getEmail();
+        this.user = user;
+        this.rno = rno;
+    }
     
     @Builder
     public Reply(int rno, String text, String reply_user, Books books,User user){

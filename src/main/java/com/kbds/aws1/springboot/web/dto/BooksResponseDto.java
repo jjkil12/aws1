@@ -14,7 +14,7 @@ public class BooksResponseDto {
     private String genre;
     private String title;
     private String comment;
-    private Long user;
+    private String user;
     private String book_name;
     private List<Reply> reply;
 
@@ -23,7 +23,7 @@ public class BooksResponseDto {
         this.title = entity.getTitle();
         this.genre = entity.getGenre();
         this.comment = entity.getComment();
-        this.user = entity.getUser().getId();
+        this.user = entity.getUser().getEmail();
         this.reply = entity.getReply();
         this.book_name = entity.getBook_name();
     }
