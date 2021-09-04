@@ -27,15 +27,7 @@ var book_main = {
                 update_text: $('#'+reply_text).val(),
                 user_mail: $('#reply_user_mail').val()
             };
-           // var test='#'+reply_text;
-           // alert(test);
-           //alert(reply_text);
-            //var test=document.getElementById(reply_text);
-            //alert(test);
-            //var test=$('#reply_update_text_'+reply_id).val();
-            alert(reply_text);
-            var text=$('#'+reply_text).val();
-            alert(text);
+
 
             $.ajax({
                 type: 'PUT',
